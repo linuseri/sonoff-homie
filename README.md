@@ -1,4 +1,19 @@
 [Homie](https://github.com/marvinroger/homie) based firmware for Sonoff Basic, Sonoff S20 wifi relay or any ESP8266 based relay.
+This is a fork of https://github.com/enc-X/sonoff-homie
+
+Changes made compared to the enc-X/sonoff-homie are primary intended to fullfill my personal needs. My needs includes the use of Shelly switches, where the "button" is actually the wall switch, and I don't want a configuration reset if someone press the wall switch for 10s. Support must also inlcude toggling wall switches and wall switches with return spring. 
+
+## Features added compared to enc-X/sonoff-homie
+* Button status is reported over MQTT
+* Configurable behaviour of the button:
+  * Toggle relay on press
+  * Toggle relay on button change
+  * Relay follows button
+  * Relay follows button inversed  
+  * Uncomitted button ( relay is not affected by button )
+* Startup behaviour of the button stored in EEPROM
+* More status shown using the LED ( using different flashing patterns )
+* Possibility to disable factory reset ( return to configuration mode ) using the button when ( When MQTT connected  )
 
 ## Features:
 * ON/OFF relay
